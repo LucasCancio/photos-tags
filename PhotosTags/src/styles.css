@@ -1,0 +1,64 @@
+@import "~normalize.css";
+
+/* You can add global styles to this file, and also import other style files */
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+html,
+body,
+app-root,
+app-login-layout,
+app-logged-layout {
+  height: 100vh;
+  width: 100vw;
+
+  background-color: #e6e6e6;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+app-login-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+app-logged-layout {
+  display: grid;
+  grid-template:
+    "header"
+    "main"
+    "main"
+    "main";
+}
+
+app-login{
+  grid-area: main;
+
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.full-width{
+  width: 100%;
+}
+
+button{
+  cursor: pointer;
+}
+
+button:disabled{
+  cursor: not-allowed;
+}
+
+router-outlet{
+  display: none;
+}

@@ -1,0 +1,35 @@
+.user-alert-title {
+  background-size: cover;
+}
+.user-alert-title span {
+  margin-left: 10px;
+}
+
+.user-alert-avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.user-alert-content{
+    margin: 0!important;
+}
+
+.user-alert-button {
+  display: flex;
+  justify-content: center;
+}
+
+.user-alert-info,
+.user-alert-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-alert-info span {
+  font-weight: bold;
+  margin: 0 8px;
+}

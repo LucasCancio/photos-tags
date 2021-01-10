@@ -1,0 +1,31 @@
+table {
+  width: 100%;
+}
+
+th,
+td {
+  padding: 10px !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+td {
+  max-width: 100px;
+  white-space: pre-wrap; /* css */
+  white-space: -moz-pre-wrap; /* Mozilla */
+  white-space: -pre-wrap; /* Chrome*/
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+th {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.filter {
+  width: 100%;
+  padding: 0 5%;
+}

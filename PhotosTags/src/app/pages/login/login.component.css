@@ -1,0 +1,56 @@
+.login-logo {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-logo p {
+  margin: 0;
+  margin-right: 20px;
+
+  font-weight: bold;
+
+  font-size: 1.5em;
+}
+
+.login-logo-image {
+  width: 60px;
+}
+
+.login-card {
+  padding: 50px;
+  background-color: white;
+
+  border-radius: 5px;
+
+  margin-top: 30px;
+}
+
+.login-button {
+  border-radius: 4px;
+  overflow: visible;
+  transition: background-color 400ms;
+
+  color: white;
+
+  background-color: #6fda6f;
+  border: none;
+
+  padding: 12px;
+  width: 100%;
+}
+
+.login-button:active,
+.login-button:focus {
+  background-color: #76ec76;
+  border-color: #76ec76;
+  box-shadow: 0 0 0 0.1rem rgb(78, 211, 78) !important;
+
+  outline: none;
+}
+
+.login-button:hover {
+  background-color: #76ec76;
+}

@@ -1,0 +1,43 @@
+.photos-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  margin: 30px 0;
+}
+
+.photos-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photos-title span {
+  margin-left: 13px;
+  font-size: 2rem;
+}
+
+.photos-title mat-icon {
+  font-size: 2.2rem;
+}
+
+.photos-title mat-icon {
+  padding-bottom: 30px;
+}
+
+app-photo-card {
+  margin: auto;
+}
+
+@media (max-width: 1350px) {
+  .photos-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .photos-list {
+    grid-template-columns: 1fr;
+  }
+}

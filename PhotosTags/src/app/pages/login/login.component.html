@@ -1,0 +1,30 @@
+<div class="login-logo">
+  <p>Photos Tags</p>
+  <img class="login-logo-image" src="../../../assets/logo.png" alt="Logo" />
+</div>
+<div class="login-card">
+  <form [formGroup]="form" (ngSubmit)="send()" (ngReset)="reset()" novalidate>
+    <p>
+      <app-custom-field
+        fieldText="E-mail"
+        fieldName="email"
+        [formGroup]="form"
+        hasIcon="true"
+        icon="email"
+        (focus)="focus()"
+      ></app-custom-field>
+    </p>
+    <p>
+      <app-custom-field
+        fieldText="Senha"
+        fieldName="password"
+        [formGroup]="form"
+        hasIcon="true"
+        icon="vpn_key"
+        type="password"
+      ></app-custom-field>
+    </p>
+
+    <button type="submit" class="login-button" [disabled]="!form.valid">Salvar</button>
+  </form>
+</div>

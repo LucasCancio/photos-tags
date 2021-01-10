@@ -1,0 +1,15 @@
+<mat-toolbar class="menu">
+  <img src="../../../assets/logo.png" class="logo" />
+
+  <button
+    mat-button
+    *ngFor="let item of menuItems"
+    (click)="changeActiveMenu(item)"
+    [routerLink]="item.link"
+    [class.selected]="item.isSelected"
+  >
+    {{ item.title }}
+  </button>
+
+  <button mat-button (click)="onLogout()" class="close-button">Sair</button>
+</mat-toolbar>

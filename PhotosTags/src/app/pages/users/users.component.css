@@ -1,0 +1,18 @@
+.user-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-title span{
+    margin-left: 13px;
+    font-size: 2rem;
+}
+
+.user-title mat-icon{
+    font-size: 2.2rem;
+}
+
+.user-title mat-icon{
+    padding-bottom: 30px;
+}

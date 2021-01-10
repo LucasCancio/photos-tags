@@ -1,0 +1,28 @@
+<h1 mat-dialog-title class="user-alert-title">
+  <img [src]="data.imageUrl" [alt]="data.name" class="user-alert-avatar" />
+  <span>{{ data.name }}</span>
+</h1>
+<div mat-dialog-content class="user-alert-content">
+  <p class="user-alert-info">
+    <mat-icon aria-hidden="false">computer</mat-icon>
+    <span>Site - </span>
+    <a [href]="fixedUrl" target="_blank" rel="noopener noreferrer">{{
+      data.website
+    }}</a>
+  </p>
+  <p class="user-alert-info">
+    <mat-icon aria-hidden="false">phone</mat-icon>
+    <span>Celular - </span> {{ data.phone }}
+  </p>
+  <p class="user-alert-info">
+    <mat-icon aria-hidden="false">home</mat-icon>
+    <span>Endereço - </span> {{ data.address.street }}, {{ data.address.city }}
+  </p>
+  <p class="user-alert-info">
+    <mat-icon aria-hidden="false">business</mat-icon>
+    <span>Empresa - </span> {{ data.company.name }}
+  </p>
+</div>
+<div class="user-alert-button">
+  <button mat-raised-button mat-dialog-close color="warn">Fechar</button>
+</div>

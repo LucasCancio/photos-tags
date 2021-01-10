@@ -1,0 +1,21 @@
+.loading{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-text{
+    font-size: 2em;
+    margin: 21px;
+
+    color: #8c8c8c;
+}
+
+.loading-spinner{
+    width: 50px;
+}
+
+.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #8c8c8c;
+}

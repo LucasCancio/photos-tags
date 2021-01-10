@@ -1,0 +1,36 @@
+<div *ngIf="$photos | async as photos">
+  <ng-template [ngIf]="length > 0" [ngIfElse]="loading">
+    <p class="photos-title">
+      <mat-icon aria-hidden="false" aria-label="Example home icon"
+        >photo_camera</mat-icon
+      >
+      <span>Fotos</span>
+    </p>
+
+    <div class="photos-list">
+      <app-photo-card
+        *ngFor="
+          let photo of $photos
+            | async
+            | slice
+              : paginator.pageIndex * paginator.pageSize
+              : (paginator.pageIndex + 1) * paginator.pageSize
+        "
+        [photo]="photo"
+      ></app-photo-card>
+    </div>
+    <mat-paginator
+      #paginator
+      [length]="length"
+      [pageSize]="pageSize"
+      [pageSizeOptions]="[6, 12, 18]"
+      showFirstLastButtons
+      (page)="pageEvent = $event"
+    >
+    </mat-paginator>
+  </ng-template>
+
+  <ng-template #loading>
+    <app-loading></app-loading>
+  </ng-template>
+</div>

@@ -1,0 +1,27 @@
+<mat-form-field
+  appearance="legacy"
+  [formGroup]="formGroup"
+  class="full-width-field"
+>
+  <mat-label>{{ fieldText }}</mat-label>
+  <input
+    matInput
+    [name]="fieldName"
+    [id]="fieldName"
+    [formControlName]="fieldName"
+    [type]="type"
+    (focus)="(focus)"
+  />
+
+  <mat-icon *ngIf="hasIcon" matSuffix>{{ icon }}</mat-icon>
+  <mat-error *ngIf="validator.hasErrorToValidate(formControl, 'required')"
+    >Campo obrigatório</mat-error
+  >
+  <mat-error *ngIf="validator.hasErrorToValidate(formControl, 'minlength')">
+    Campo precisa ter no mínimo
+    {{ validator.validateLength(formControl, "minlength") }} caracteres
+  </mat-error>
+  <mat-error *ngIf="validator.hasErrorToValidate(formControl, 'email')">
+    Email inválido
+  </mat-error>
+</mat-form-field>
